@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbwn4yegeqm4s"]
+
+[ext_resource type="PackedScene" uid="uid://orxh3ixo0p6g" path="res://models/barrier/barrier.blend" id="1_dyfs4"]
+
+[node name="Barrier" type="Node3D"]
+
+[node name="barrier" parent="." instance=ExtResource("1_dyfs4")]
