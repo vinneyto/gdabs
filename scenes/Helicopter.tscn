@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvm0dmh82mp6l"]
+
+[ext_resource type="PackedScene" uid="uid://dj8hokgj1u33k" path="res://models/helicopter/helicopter.blend" id="1_qwjj1"]
+[ext_resource type="Script" path="res://scripts/Helicopter.cs" id="2_6fqu1"]
+[ext_resource type="Script" path="res://scripts/HelicopterRotors.cs" id="3_s1p4x"]
+
+[node name="helicopter" instance=ExtResource("1_qwjj1")]
+script = ExtResource("2_6fqu1")
+
+[node name="GLTF_SceneRootNode" parent="Sketchfab_model/root" index="0"]
+script = ExtResource("3_s1p4x")

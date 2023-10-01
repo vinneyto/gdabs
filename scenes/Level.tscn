@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgficd37gdkjw"]
+[gd_scene load_steps=8 format=3 uid="uid://dgficd37gdkjw"]
 
 [ext_resource type="Script" path="res://scripts/Level.cs" id="1_j3yki"]
+[ext_resource type="PackedScene" uid="uid://dvm0dmh82mp6l" path="res://scenes/Helicopter.tscn" id="2_77avj"]
 [ext_resource type="PackedScene" uid="uid://dldxs43qel6kv" path="res://scenes/Road.tscn" id="2_228u8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vu51a"]
@@ -25,14 +26,18 @@ script = ExtResource("1_j3yki")
 environment = SubResource("Environment_mg6oj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, -0.070607, 0.600897, 0.796202, -0.494993, 0.671878, -0.550965, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.25, -0.252575, 0.810374, 0.528677, -0.43152, 0.394703, -0.811172, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.998193, 0.0600904, 0, -0.0600904, 0.998193, 0, 0.471728, 11.919)
+transform = Transform3D(1, 0, 0, 0, 0.985958, -0.166992, 0, 0.166992, 0.985958, 0, 1.72887, 11.919)
+current = true
 
 [node name="Road" parent="." instance=ExtResource("2_228u8")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01882, 0.108921)
 mesh = SubResource("CapsuleMesh_q8ygf")
+
+[node name="helicopter" parent="." instance=ExtResource("2_77avj")]
+transform = Transform3D(0.981054, 0.0333227, 0.190848, 0.0195501, 0.96304, -0.268648, -0.192746, 0.267289, 0.944142, 0, 4, 1)
